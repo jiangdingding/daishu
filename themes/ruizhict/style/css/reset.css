@@ -1,0 +1,34 @@
+﻿.clearfix:after{content:".";display:block;overflow:hidden;height:0;clear:both;visibility:hidden;}
+.clearfix{display:inline-block;}
+* html .clearfix{height:1%;}
+.clearfix{display:block;}
+
+body{
+    font-family: "Microsoft Yahei", "微软雅黑", Tahoma, Arial, Helvetica, STHeiti;
+    background-color:#fff;
+    font-size:12px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+p,h1,h2,h3,dl,dd,dt,ul,li{
+    margin:0;
+    padding:0;
+}
+ul,li{list-style: none;}
+
+a img{
+    border:none;
+}
+
+/*main*/
+a{
+    color: #222222;
+    text-decoration: none;
+}
+a:hover{
+    color:#0092ff;
+    text-decoration: underline;
+}

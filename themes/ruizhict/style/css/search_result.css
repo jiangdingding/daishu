@@ -1,0 +1,166 @@
+/*洪城新加-开始*/
+#resultpage {
+	width: 960px;
+	font-size: 12px;
+	line-height: 15px;
+	margin-left: 0;
+	float: left;
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+}
+#resultpage .item :hover {
+background-color: #F6F6F6;
+cursor: pointer;
+}
+#resultpage td {
+	display: block;
+}
+
+#resultpage #buttontoubiao {
+	cursor: pointer;
+	box-shadow: 0 1px 2px #000;
+	border-radius: 2px;
+	border: 1px solid;
+	font-size: 16px;
+	font-weight: bold;
+	height: 32px;
+	width: 128px;
+	border: 0;
+	background: url(img/searchbt.png);
+	background-repeat-x: repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+	font-size: 16px
+}
+
+#tender_achieve {
+	border-radius: 2px;
+	border: 1px solid;
+	font-size: 16px;
+	font-weight: bold;
+	height: 32px;
+	width: 128px;
+	border: 0;
+	background: url(img/button_grey.png);
+	background-repeat-x: repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+	font-size: 16px
+}
+
+#loan_repayment {
+	border-radius: 2px;
+	border: 1px solid;
+	font-size: 16px;
+	font-weight: bold;
+	height: 32px;
+	width: 128px;
+	border: 0;
+	background: url(img/button_grey.png);
+	background-repeat-x: repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+	font-size: 16px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#resultpage #resultcontent1 {
+	width: 170px;
+}
+
+#resultpage #resultcontent2 {
+	width: 165px;
+	margin-left: -5px;
+}
+
+#resultpage #resultcontent2 .spec1 {
+	color:red;
+}
+#resultpage #resultcontent3 {
+	width: 165px;
+}
+
+#resultpage #resultcontent4 {
+	width: 165px;
+	padding-left: 10px;
+	border-right: 1px solid #EDEEEF;
+	line-height:18px;
+}
+
+#resultpage #resultcontent5 {
+	width: 160px;
+	border-right: 1px solid #EDEEEF;
+	line-height:18px;
+}
+
+#resultpage .tubiaobutton {
+	margin-top: 25px;
+	position:relative;
+	bottom:20px;
+	left:30px; 
+	border:1px solid #EDEEEF;
+}
+
+/*进度条*/
+#resultpage .rate_bg {
+	width: 87px;
+	border: 1px solid #CCCCCC;
+	padding: 1px;
+	overflow: hidden;
+	line-height: 10px;
+	height: 10px
+}
+
+#resultpage .rate_tiao {
+	background: url(/themes/ruizhict/images/tiaotiao.gif) no-repeat;
+	height: 10px;
+	overflow: hidden;
+	width: auto;
+	line-height: 10px
+}
+/*洪城新加-结束*/
+
+
+
+.filter-header {
+height: 28px;
+line-height: 28px;
+overflow: hidden;
+border: 1px solid #ccc;
+border-left: none;
+border-right: none;
+box-shadow: none;
+cursor: default;
+padding-top: 5px;
+padding-bottom: 5px;
+filter: none;
+padding: 0 30px;
+background: url(img/filter-selector-icons.gif) repeat-x left bottom;
+}

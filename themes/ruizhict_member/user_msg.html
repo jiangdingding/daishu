@@ -1,0 +1,35 @@
+{include file="header.html" template_dir="themes/ruizhict"}
+<!-- 陈亮添加 -->
+<link rel="stylesheet" href="{$tempdir}/style/css/user_index.css" />
+
+<div class="container clearfix" style="margin-top:15px;">
+	<div class="block-title">系统信息</div>
+	<div class="i-news-c" style="text-align:center;background-color:#FFF;">
+		<div style="margin-top:10px;margin-bottom:10px;font-size:16px">
+			{ $_U.showmsg.msg }</div>
+	     <div id="msg_content"><a href="{ $_U.showmsg.url }">{$_U.showmsg.content}</a></div><br />
+		
+	</div>
+</div>
+
+<script> 
+var url = '{ $_U.showmsg.url|$ }';
+var content = '{ $_U.showmsg.content }';
+{literal}
+if (url == ""){
+	document.getElementById('msg_content').innerHTML = "<a href='javascript:history.go(-1)'>"+content+"</a>";
+}else{
+	document.getElementById('msg_content').innerHTML = "<a href='"+url+"'>"+content+"</a>";
+}
+setInterval("testTime()",5000); 
+function testTime() { 
+		if (url == ""){
+			history.go(-1);
+		}else{
+        location.href = url; //#设定跳转的链接地址
+		}
+} 
+</script>{/literal}
+
+
+{include file="../ruizhict/footer.html"}

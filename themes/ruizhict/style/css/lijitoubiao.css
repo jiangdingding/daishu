@@ -1,0 +1,130 @@
+table td {
+	font-weight: normal;
+}
+
+.mod {
+	margin-bottom: 10px;
+}
+
+/*topmod*/
+.topmod .title {
+	background: #F1F7FC;
+	height: 37px;
+	line-height: 37px;
+	padding: 0 10px;
+	font-size: 22px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.topmod {
+	background-color: #ffffff;
+}
+
+.products_table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 0;
+}
+
+.products_table th,.products_table td {
+	/*border-bottom:1px solid #d0ddef;*/
+	/*border-right:1px solid #d0ddef;*/
+	border-bottom: 0;
+	border-right: 0; text-align : left;
+	padding: 0 8px 0 15px;
+	line-height: 32px;
+	text-align: left;
+}
+
+.topmod .mod_content { /*border:2px solid #879dd0;*/
+	border: 0;
+}
+
+.topmod .bank {
+	width: 80px;
+	padding: 0 10px;
+}
+
+.topmod .first_house {
+	width: 100px;
+}
+
+.topmod .second_house {
+	width: 108px;
+}
+
+.topmod .com_house {
+	width: 70px;
+}
+
+.topmod .feature {
+	width: 108px;
+}
+
+.topmod .view-it {
+	text-align: center;
+	padding: 0;
+	border-right: 0;
+}
+
+.products_table td {
+	color: #000000;
+}
+
+.topmod {
+	color: #234d89;
+}
+
+.topmod h3 {
+	padding: 15px 10px 10px 10px;
+	font-size: 14px;
+	margin: 0;
+}
+
+.topmod .links {
+	padding: 0 10px 10px 10px;
+}
+
+.topmod .links a {
+	float: left;
+	color: #234d89;
+	width: 105px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.topmod .rate {
+	color: #e74c3c;
+}
+/*end topmod*/
+#mod-topmod {
+	width: 960px;
+	margin: 20px auto;
+	font-size: 14px;
+	margin-bottom: 100px;
+	padding-bottom:10px;
+	box-shadow: 0 0 4px #DDD;
+	border: 1px solid #DDD;
+}
+
+.chongzhibutton {
+	cursor: pointer;
+	border-radius: 2px;
+	border: 1px solid;
+	font-size: 16px;
+	font-weight: bold;
+	border: 0;
+	background: url(img/button3.png);
+	background-repeat-x: repeat;
+	background-repeat-y: no-repeat;
+	background-attachment: initial;
+	background-position-x: initial;
+	background-position-y: initial;
+	background-origin: initial;
+	background-clip: initial;
+	background-color: initial;
+	font-size: 16px
+}
+
+

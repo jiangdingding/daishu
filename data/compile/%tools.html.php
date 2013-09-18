@@ -1,0 +1,43 @@
+<? $this->magic_include(array('file' => "header.html", 'vars' => array()));?>
+<div class="con_box t10" id="mytools">
+	<div class="bigcontent">
+		<div id="title">利息计算器</div>
+		
+		<div class="m_l_bor" id="lixicontent">
+
+
+			<div class="content1">
+				<form action="/lixi/index.html" method="get">
+					借款金额：<input class="jiekuangjine" type="text" name="account"
+						size="10"
+						value="<? echo isset($_REQUEST['account'])?$_REQUEST['account']:""; ?>"
+					value="
+					<? echo $_REQUEST['account'];?>
+					" /> </br>
+					</br>年利率：&nbsp;&nbsp;&nbsp;<input class="nianlilv" style="margin-left:2px;" type="text"
+						name="lilv" size="10"
+						value="<? echo isset($_REQUEST['lilv'])?$_REQUEST['lilv']:""; ?>"/>&nbsp;&nbsp;%
+					</br>
+					</br>借款期限：<input class="jiekuangqixian" type="text" name="times"
+						size="10"
+						value="<? echo isset($_REQUEST['times'])?$_REQUEST['times']:""; ?>"
+					/>个月</br> </br>还款方式：<select class="huankuangfangshi" name="type"><option
+							value="month" >按月还款</option>
+					</select> </br>
+					</br>
+					<input class="anniu" type="submit" value="开始计算" />
+				</form>
+			</div>
+			<div class="content2">采用银行房贷等通用的"等额本息还款法",即借款者每月以相等的金额偿还贷款本息</div>
+		</div>
+	</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+</div>
+ <? $this->magic_include(array('file' => "footer.html", 'vars' => array()));?>

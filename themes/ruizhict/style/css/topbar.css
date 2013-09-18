@@ -1,0 +1,64 @@
+﻿.topbar{
+    background-color: #3c3d41;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index:5;
+}
+.topbar a{
+    color:#DDD;
+}
+.topbar a:hover{
+    color:#fff;
+    text-decoration: none;
+}
+.current_city{
+    display:inline-block;
+    line-height:normal;
+    cursor:pointer;
+    color:#ddd;
+    background:#3c3d41 url(img/fd-icons.gif) left -231px no-repeat;
+    padding-left:15px;
+}
+.current_city b{
+    display:inline-block;
+    border-top:5px solid #999;
+    border-left:5px solid #3c3d41;
+    border-right:5px solid #3c3d41;
+    height:0;
+    font-size:0;
+    width:0;
+    overflow:hidden;
+    vertical-align:middle;
+    margin-left:2px;
+}
+
+.top-center{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.top-left li{
+    display: inline;
+    margin-right: 18px;
+    position:relative;
+}
+.top-left{
+    float: left;
+    padding: 8px 0;
+}
+.top-right{
+    float: right;
+    padding: 8px 0;
+}
+.top-right span{
+    color: #aab0bd;
+}
+.mobile-icon{
+    background-image: url(img/mobile-icon.png);
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    *background-position: 0 -3px;
+    _background-position: 0 0px;
+}
+

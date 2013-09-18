@@ -1,0 +1,493 @@
+ {include file="header.html"}
+
+
+<!--子栏目 开始-->
+{literal}
+<?
+$this->magic_vars['_G']['uurl'] = url_format($this->magic_vars['_G']['nowurl'],"order");
+$this->magic_vars['_G']['epurl'] = url_format($this->magic_vars['_G']['nowurl'],"epage");
+?>
+{/literal}
+<!--子栏目 结束-->
+{if $magic.request.type==late}
+<div class="wrap950 invest">
+	<div class="invest_order">
+		<div class="floatl">
+			<strong>逾期的借款人</strong>
+		</div>
+		<div class="floatr">
+			显示： <a href="{$_G.epurl}&epage=20"><img
+				src="{$tpldir}/images/ico_20.gif" align="absmiddle" /> </a> <a
+				href="{$_G.epurl}&epage=40"><img
+				src="{$tpldir}/images/ico_40.gif" align="absmiddle" /> </a> <a
+				href="{$_G.epurl}&epage=60"><img
+				src="{$tpldir}/images/ico_60.gif" align="absmiddle" /> </a>
+			&nbsp;&nbsp;
+		</div>
+	</div>
+	<div class="invest_list">
+		{list module="borrow" function="GetLateList" var="loop" late_day="1"}
+		<table border="0" cellspacing="0" width="100%">
+			<tr class="title">
+				<td width="18%" class="tou">头像</td>
+				<td>资料</td>
+				<td>联系方式</td>
+				<td>公开财务</td>
+			</tr>
+			{foreach from="$loop.list" item="var" }
+			<tr class="tr1">
+				<td align="center">
+					<div style="margin-left:20px;">
+						<a href="/u/{$var.user_id}" target="_blank"><img
+							src="{$var.user_id|avatar:" middle"|imgurl_format}" border="0"
+							class="picborder" /> </a>
+					</div>
+				</td>
+				<td>
+					<ul class="li">
+						<li class="cu" style="height:30px; overflow:hidden"><a
+							href="/u/{$var.user_id}" title="{$var.realname}">{$var.realname}</a>
+						</li>
+						<li>性别：{if $var.sex==1 }男{else}女{/if}</li>
+						<li>身份证号:{$var.card_id }</li>
+						<li>所 在 地：{$var.area|area}</li>
+					</ul>
+				</td>
+				<td><ul class="li">
+						<li class="cu"><font color="#FF0000">欠款总额：￥{$var.late_account}</font>
+						</li>
+						<li>Email：{$var.email}</li>
+						<li>电话：{$var.phone}</li>
+						<li>QQ:{$var.qq}</li>
+					</ul></td>
+				<td>
+					<ul class="li">
+						<li class="cu"><font color="#FF0000">逾期笔数：{$var.late_num}笔</font>
+						</li>
+						<li>网站代还笔数：{$var.late_webnum|default:0}</li>
+						<li>最长逾期天数:{$var.late_numdays}天</li>
+						<li>更新时间：{$_G.nowtime|date_format:"Y-m-d H:i:s"}</li>
+					</ul></td>
+
+			</tr>
+			{/foreach}
+		</table>
+
+	</div>
+	<!--分页开始-->
+	<div>
+		<table align="center" class="list_table_page">
+			<tr align="center">
+				<td height="25"><Div align="center">{$loop.showpage}</Div></td>
+			</tr>
+		</table>
+	</div>
+	<!--分页结束-->
+
+	{/list}
+</div>
+{else}
+
+
+
+
+<div class="search-box hp">
+	<div class="sb_c">
+		<div class="sb_main">
+			<div class="sb_card">
+				<div class="sb_title pngfix">我要<font size="5">投资</font></div>
+		<div style="padding-top:10px;"> 
+			<form action="" method="get">
+				<div class="sb_line isiy z11">
+					<div class="sb_label ">借款目的</div>
+					<div class="sb_value sb_input_wrap" style="border:0;">
+						<div class="sb_input">{linkages name="use" nid="borrow_use"
+							value="$magic.request.use" default="没有限制"}</div>
+					</div>
+					<div class="sb_tip_text "></div>
+				</div>
+				<!--期限-->
+				<div class="sb_line isiy z11">
+					<div class="sb_label ">还款期限</div>
+					<div class="sb_value sb_input_wrap" style="border:0;">
+						<div class="sb_input">{linkages name="limittime"
+							nid="borrow_time_limit" type="value"
+							value="$magic.request.limittime" default="没有限制"}</div>
+					</div>
+					<div class="sb_tip_text "></div>
+
+				</div>
+				<!--期限-->
+				<!--金额范围-->
+				<div class="sb_line isiy z11">
+					<div class="sb_label ">借款金额</div>
+					<div class="sb_value sb_input_wrap" style="border:0;">
+						<div class="sb_input">
+							{linkages name="account1" nid="account_amange" type="value"
+							value="$magic.request.account1" }<span
+								style="margin-left:10px;margin-right:10px;">到</span>{linkages
+							name="account2" nid="account_amange" type="value"
+							value="$magic.request.account2" default="没有限制"}
+						</div>
+					</div>
+					<div class="sb_tip_text "></div>
+
+				</div>
+				<!--金额范围-->
+
+				<div class="sb_line" style="position:relative;z-index:7">
+					<div class="sb_label"></div>
+					
+					<input type="submit" id="quick_search_btn" hover-class="hover" click-class="click" class="buttontoubiao" style="color:#000" value="我要投资"
+					/> <input type="hidden"
+					name="type" value="{$magic.request.type}" />
+					
+			<!-- 		<div id="quick_search_btn" hover-class="hover" click-class="click"
+							class="search_button button_3d box-shadow" data-track="投资|快搜|首页">
+							我要投资</div>    -->
+
+				</div>
+				</form>
+			</div>
+			</div>
+
+<!-- 
+			<div class="sb_link_wrap" id="hot_loan_links">
+				<div class="sb_link_title text-shadow">热门搜索</div>
+				<ul class="sb_link_list clearfix">
+					<li><a href="/invest/index.html">5万信用贷</a><span>约8家银行</span>
+					</li>
+					<li><a href="/invest/index.html">10万信用贷</a><span>约11家银行</span>
+					</li>
+					<li><a href="/invest/index.html">10万经营贷</a><span>约18家银行</span>
+					</li>
+				</ul>
+			</div>
+ -->			
+			<div class="sb_banner transition-slow pngfix sb_banner_active">
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+<!--投资搜索  开始-->
+<!-- 
+<div class="wrap950 list_1" id="wrap950_list_1" style="padding-top:10px;background: #FDFDFD;">
+	<form action="" method="get">
+
+		<div class="content">
+
+			<div class="sb_line result_sb_line" style="margin-left:20px;">
+				<div class="sb_label ">还款方式:</div>
+				<div class="sb_value sb_input_wrap" style="border:0; height:29px;">
+					<div class="sb_input">{linkages name="style"
+						nid="borrow_style" value="$magic.request.style" default="无限制"}</div>
+				</div>
+				<div class="sb_tip_text "></div>
+
+			</div>
+			<div class="sb_line result_sb_line" style="margin-left:63px;">
+				<div class="sb_label ">借款目的:</div>
+				<div class="sb_value sb_input_wrap" style="border:0;">
+					<div class="sb_input">{linkages name="use" nid="borrow_use"
+						value="$magic.request.use" default="无限制"}</div>
+				</div>
+				<div class="sb_tip_text "></div>
+			</div>
+			<div class="sb_line result_sb_line" style="margin-left:40px;">
+				<div class="sb_label ">期限:</div>
+				<div class="sb_value sb_input_wrap" style="border:0;">
+					<div class="sb_input">{linkages name="limittime"
+						nid="borrow_time_limit" type="value"
+						value="$magic.request.limittime" default="无限制"}</div>
+				</div>
+				<div class="sb_tip_text "></div>
+
+			</div>
+			<div class="sb_line result_sb_line" style="margin-left:40px;">
+				<div class="sb_label ">奖励:</div>
+				<div class="sb_value sb_input_wrap" style="border:0;">
+					<div class="sb_input">
+						<select name="award">
+							<option value="">无限制</option>
+							<option value="1" {if $magic.request.award==
+								"1"} selected="selected"{/if}>只显示有奖励的</option>
+							<option value="2" {if $magic.request.award==
+								"2"} selected="selected"{/if}>只显示没奖励的</option>
+						</select>
+					</div>
+				</div>
+				<div class="sb_tip_text "></div>
+
+			</div>
+
+			<div class="sb_line result_sb_line" style="margin-left:20px;">
+				<div class="sb_label ">金额范围:</div>
+				<div class="sb_value sb_input_wrap" style="border:0;">
+					<div class="sb_input">
+						{linkages name="account1" nid="account_amange" type="value"
+						value="$magic.request.account1" }<span
+							style="margin-left:5px;margin-right:5px;">到</span>{linkages
+						name="account2" nid="account_amange" type="value"
+						value="$magic.request.account2" default="100000" }
+					</div>
+				</div>
+				<div class="sb_tip_text "></div>
+
+			</div>
+
+
+
+			<div class="sb_line result_sb_line" style="margin-left:74px;">
+				<div class="sb_label ">所在地区:</div>
+				<div class="sb_value sb_input_wrap" style="border:0;">
+					<div class="sb_input">
+						<script
+							src="/plugins/index.php?q=area&type=p,c&area={$magic.request.city|default:$magic.request.province}"></script>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="sb_line result_sb_line" style="position:relative;left:55px;">
+				<input type="submit" class="button_blue_big" value="搜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;索"
+					/> <input type="hidden"
+					name="type" value="{$magic.request.type}" />
+			</div>
+
+
+
+		</div>
+	</form>
+	
+</div>
+ -->
+
+<!--投资搜索 结束-->
+<div class="clearfix index-middle" id="clearfix_index-middle" style="background: #FDFDFD; ">
+
+	{list module="borrow" function="GetList" var="loop" site_id="0"
+		keywords="request" type="request" use="request" account1="request"
+		account2 = "request" limittime="request" award="request"
+		province="request" city="request" epage="request"
+		order="$magic.request.order" }
+	
+	<div class="block-a">
+	<div class="i-pd-t clearfix">
+				<span class="fl i-pd_title">符合条件的贷款</span> <span class="fl gray-font"
+					style="padding-left:8px;">共搜索到&nbsp;{$loop.total}&nbsp;条结果</span>
+	</div>
+	
+<!-- 	<div class="filter-header">共搜索到&nbsp;{$loop.total}&nbsp;条结果</div>    -->
+
+
+
+	<div class="invest_order" id="jiekuangshousuo2">
+		<div class="floatl" style="border-bottom:0;">
+			{if $var.is_vouch!=1} <span
+				style="width:60px;text-align:center;font-weight: bolder;">默认排序
+			</span> <span> {if $magic.request.order=='account_up'}<a
+				href="{$_G.uurl}&order=account_down"><font
+					style="color:#FF0000;">金额↑</font> </a> {elseif
+				$magic.request.order=='account_down'}<a
+				href="{$_G.uurl}&order=account_up"><font color="#FF0000">金额↓</font>
+			</a> {else}<a href="{$_G.uurl}&order=account_up">金额</a>{/if} </span> <span>
+				{if $magic.request.order=='apr_up'}<a
+				href="{$_G.uurl}&order=apr_down"><font color="#FF0000">利率↑</font>
+			</a> {elseif $magic.request.order=='apr_down'}<a
+				href="{$_G.uurl}&order=apr_up"><font color="#FF0000">利率↓</font>
+			</a> {else}<a href="{$_G.uurl}&order=apr_up">利率</a>{/if} </span> <span>
+				{if $magic.request.order=='jindu_up'}<a
+				href="{$_G.uurl}&order=jindu_down"><font color="#FF0000">进度↑</font>
+			</a> {elseif $magic.request.order=='jindu_down'}<a
+				href="{$_G.uurl}&order=jindu_up"><font color="#FF0000">进度↓</font>
+			</a> {else}<a href="{$_G.uurl}&order=jindu_up">进度</a>{/if} </span> <span>
+				{if $magic.request.order=='credit_up'}<a
+				href="{$_G.uurl}&order=credit_down"><font color="#FF0000">信用↑</font>
+			</a> {elseif $magic.request.order=='credit_down'}<a
+				href="{$_G.uurl}&order=credit_up"><font color="#FF0000">信用↓</font>
+			</a> {else}<a href="{$_G.uurl}&order=credit_up">信用</a>{/if} </span> {/if}
+
+			<form action="" method="get">
+
+				<div class="sb_line result_sb_line"
+					style="float:right;margin-top:-5px;margin-left:30px;margin-right:30px; ">
+					<input style="position:relative;top:10px;right:20px;" type="submit"
+						class="button_blue_small" value="搜索"> <input type="hidden"
+						name="type" value="{$magic.request.type}" />
+				</div>
+				<div class="sb_line result_sb_line"
+					style="height:20px;margin-top:5px; float:right;">
+					<input type="text" name="keywords"
+						style="display:block;magin-top:-30px;"
+						value="{$magic.request.keywords|urldecode}" />
+					<div class="sb_tip_text "></div>
+				</div>
+				
+				
+			</form>
+
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<div class="result" id="resultpage">
+		
+		<ul class="a-product_list search_list">
+			{foreach from="$loop.list" item="var" }
+			<li class="item" style="height:125px;">
+				<div class="item_cont" style="padding-left:10px;padding-top:10px;">
+					<div class="bank_icon">
+						<a href="a{$var.id}.html"> <img
+							style="position:relative;top:8px;" src="{$var.user_id|avatar:" middle"|imgurl_format}" />
+						</a>
+					</div>
+					<div class="item_info" ra-data-pl="508e6afz8">
+						<h4 class="title" style="position:relative;top:6px;width:450px;">
+							<a href="a{$var.id}.html" target="_blank" title="{$var.name}">{$var.name}<span
+								class="sub-title"></span> </a>
+						</h4>
+
+						<div class="item_meta">
+							<div
+								onclick="window.location.href= 'a{$var.id}.html';return false">
+								<td><ul class="meta_sep specs" id="resultcontent1">
+										<li class="spec no-house"><span class="icon pngfix">{if
+												$var.is_vouch==1}<img src="{$tpldir}/images/danbao.gif" />{/if}
+												{if $var.flag==1} <img src="{$tpldir}/images/tuijian.gif"
+												align="absmiddle" />{elseif $var.flag==2} <img
+												src="{$tpldir}/images/danbao.gif" align="absmiddle" />{elseif
+												$var.flag==3} <img src="{$tpldir}/images/diya.gif"
+												align="absmiddle" />{/if}</span> <span class="text">贷款号：{$var.id}</span>
+										</li>
+										<li class="spec work"><span class="icon pngfix"></span> <span
+											class="text">发布者：<a href="/u/{$var.user_id}"
+												target="_blank">{$var.username}</a> </span></li>
+										<li class="spec time"><span class="icon pngfix"></span><span
+											class="text">客
+												&nbsp;服：{$var.kefu_username|default:"-"}</span>
+										</li>
+									</ul>
+								</td>
+								<td><ul class="meta_sep reqs" id="resultcontent2">
+										<li class="spec"><span class="spec1">￥{$var.account}
+												元</span></li>
+										<li class="spec">年利率：<span class="spec1">{$var.apr}%</span>
+										</li>
+										<li class="spec">{$var.use|linkage}</li>
+
+										<!--  <li class="spec">{$var.style|linkage:"borrow_style"}</li>-->
+									</ul>
+								</td>
+
+								<td>
+									<div class="xinyongqingkuang" id="resultcontent4"
+										style="height:90px;">
+										<ul style="display:block;margin-top:10px; ">
+											<li>信用:&nbsp;&nbsp;<img
+												src="{$_G.system.con_credit_picurl}{ $var.credit_pic}"
+												title="{$var.credit_jifen}分" /></li>
+											<!--<li class="spec">招标期限：{$var.time_limit}个月</li>-->
+											<li>所在地：{$var.user_area|area:"p,c"}</li>
+											<!--  <li class="spec">信用积分：{$var.credit_jifen}分</li>-->
+
+										</ul>
+									</div>
+								</td> {if $var.is_vouch==1}
+								<td>
+									<div style="width:160px;">
+										<ul class="meta_sep lixi"
+											style="display:block;margin-top:10px;border-right: 1px solid #EDEEEF;">
+											<li class="spec"><div class="rate_bg ">
+													<div class="rate_tiao"
+														style="width:{$var.scale|default:0}%"></div>
+												</div>
+											</li>
+											<li class="spec">投资完成：<span>&nbsp;{$var.scale}%
+													（{$var.account_yes}元）</span>
+											</li>
+											<li>
+												<div class="rate_bg ">
+													<div class="rate_tiao"
+														style="width:{$var.vouch_scale|default:0}%"></div>
+												</div></li>
+											<li>担保完成：<span>&nbsp;{$var.vouch_scale}%
+													（{$var.vouch_account}元）</span></li>
+										</ul>
+									</div>
+								</td> {else}
+								<td style="width:160px;"><div id="resultcontent5"
+										>
+										<ul class="succesrate"
+											style="display:block;margin-top:10px;margin-left:10px;line-height:18px;">
+											<li>
+												<div class="rate_bg ">
+													<div class="rate_tiao"
+														style=" width:{$var.scale|default:0}%"></div>
+												</div>
+											</li>
+											</br>
+											<li>已经完成： <span>&nbsp;{$var.scale}%</span></li>
+
+											<!--<li>已完成投标：{$var.account_yes}</li>
+
+										<li>投标状态：{if $var.status==3}成功招标{elseif
+											$var.scale==100}满标审核中{else}正在招标{/if}</li>-->
+										</ul>
+									</div></td> {/if}
+							</div>
+
+
+
+							<td>
+								<ul class="jilitoubiao" id="resultcontent6">
+									<li class="spec btn" id="touzhibutton">
+										<div class="tubiaobutton">
+											{if $var.status==3} {if $var.repayment_account ==
+											$var.repayment_yesaccount } 
+											<button id="tender_achieve">已完成</button>
+								<!--  			<img src="{$tempdir}/images/tender_achieve.jpg" /> -->
+												{else} 
+											<button id="loan_repayment">还款中</button>
+								<!-- 			<img src="{$tempdir}/images/loan_repayment.jpg" />   -->	
+											{/if} {elseif
+											$var.status==5} 用户取消 {elseif $var.status==4} {elseif
+											$var.account>$var.account_yes} <a
+												href="/invest/a{$var.id}.html?detail=true">
+												<button id="buttontoubiao">立即投标</button> </a>{else} <img
+												src="{$tempdir}/images/tender_wait.jpg" /> {/if}</a>
+										</div></li>
+								</ul></td>
+						</div>
+					</div>
+				</div>
+			</li> {/foreach}
+		</ul>
+	</div>
+
+	<!--分页开始-->
+	<div style="padding-top:10px;padding-bottom:20px">
+		<table class="list_table_page" align="center">
+			<tr align="center">
+				<td height="25"><Div align="center">{$loop.showpage}</Div></td>
+			</tr>
+		</table>
+	</div>
+	<!--分页结束-->
+
+	{/list}
+	</div>
+</div>
+
+{/if} {include file="footer.html"}

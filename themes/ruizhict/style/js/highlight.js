@@ -1,0 +1,1 @@
+include("mod/jquery.color"),function(a){a.fn.extend({highlight:function(b){var c=a(this),d=c.css("backgroundColor")||"#FFFFFF";b=b||"#f96",c.animate({backgroundColor:b},{duration:800,queue:!0}).animate({backgroundColor:d},{duration:1200,queue:!0})}})}(jQuery)

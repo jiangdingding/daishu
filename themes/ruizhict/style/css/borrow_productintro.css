@@ -1,0 +1,158 @@
+
+.subfooter{
+  margin: 20px auto 20px auto;
+  position: relative;
+  width: 960px;
+  clear: both;
+}
+.subfooter .box {
+  float: left;
+  width: 289px;
+  float: left;
+  border-right: 1px solid #f2f2f2;
+  height:190px;
+  margin:15px 0; 
+  padding:0 15px;
+}
+.subfooter .seo_font h2{
+	border-bottom:1px dashed #ddd;
+	font-size:18px;
+	padding-bottom:5px;
+	position:relative;
+}
+.subfooter .last{
+	border-right:none;
+}
+.subfooter .box .title {
+  height: 18px;
+}
+
+.subfooter .box ul {
+  padding-left: 1px;
+  list-style:none;
+  margin:0;
+  padding:0;
+  padding-top:10px;
+}
+
+.subfooter .box li {
+  background: url("img/blue-dot.png") no-repeat 0 5px;
+  padding: 3px 0 5px 15px;
+  color: #b7b7b7;
+  overflow:hidden;
+}
+
+.subfooter .box li a{
+	color:#666;
+	float:left;
+	/*width:180px;*/
+	overflow:hidden;
+	/*text-overflow:ellipsis;
+	white-space: nowrap;*/
+}
+.subfooter .box li a:hover{
+	color:#0092ff;
+}
+.subfooter .box li span{
+	color:#ccc;
+	float:right;
+	width:70px;
+}
+
+
+
+.checkmarkList {
+margin-left: 4px;
+
+padding-left: 25px;
+font-size: 130%;
+font-weight: bold;
+}
+
+.checkmarkList li {
+	
+background: url("img/checkmark.png") no-repeat 0 5px;
+padding: 3px 0 5px 30px;
+overflow: hidden;
+list-style:none;
+}
+
+
+/* --- Lender Box --- */
+
+#lenderbox {
+    float: left;
+    background-image: url('../images/start/lenderBg.png');
+    background-repeat: no-repeat;
+    background-position: 360px 40px;
+}
+
+#lenderbox .structureWrapper {
+    margin-top: 30px;
+}
+
+#lenderbox .rightBox{
+    text-align: right;
+    margin-top: 25px;
+}
+
+#lenderbox .rightBox #renditeHeadline,
+#lenderbox .rightBox #renditeHeadline span {
+    color: #EA5801;
+}
+
+#lenderbox .rightBox #renditeHeadline {
+    font-weight: bold;
+    font-size: 125%;
+}
+
+#lenderbox .rightBox #renditeHeadline span {
+    font-weight: bold;
+    font-size: 210%;
+}
+
+#lenderbox .rightBox .btn-arrow {
+    margin-top: 15px;
+}
+
+#lenderbox .leftBox {
+    margin-top: 20px;
+}
+
+#lenderbox .leftBox .checkmarkList {
+    margin-left: 4px;
+}
+
+
+
+
+.radio {
+background: #F2F6FD;
+height: 14px;
+width: 14px;
+border-radius: 100%;
+border: 1px solid #BBC1CA;
+display: inline-block;
+zoom: 1;
+padding: 0;
+margin: 0;
+color: #315DA1;
+}
+/**
+.radioOn {
+background: #315DA1;
+}**/
+.radioOn {
+background: #61CD1A;
+}
+
+.radio_label{
+	cursor: pointer;
+}
+
+.radio_ul li{
+	padding-top:10px;
+	font-weight: bold;
+	font-size: 15px;
+	
+}

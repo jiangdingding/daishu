@@ -1,0 +1,563 @@
+
+.prd_spec_img{
+  display: inline-block;
+  *display: inline;
+  zoom:1;
+  width:56px;
+  height:45px;
+  background:url("img/all.png") no-repeat;
+}
+	.save_user_info{
+		margin-left:113px;
+		color:#666;
+		margin-bottom:80px;
+		margin-top:45px;
+	}
+	.save_user_info h4{ 
+		font-size:18px;
+		color:#ff6633;
+		font-weight:normal;
+	}
+	.save_user_info p{
+		padding:0;
+		margin:0;
+	}
+	.save_user_info .register-name{
+		font-size:12px;
+		color:#666;
+		width:80px;
+		text-align:right;
+		vertical-align:middle; 
+		line-height:42px;
+		height:40px;
+		overflow:hidden;
+	}
+	.save_user_info .register-line{
+		height:40px;
+		line-height:40px;
+		vertical-align:middle;
+        padding-bottom:8px;
+	}
+	.save_user_info .register-line .register-input{
+		padding-top:0;
+		height:40px;
+	}
+	.save_user_info .register-line .register-input input{
+		height:30px;
+		vertical-align:middle;
+		line-height:30px;
+	}
+
+.successtitle{
+	vertical-align:middle;
+	margin-bottom:0;
+}
+.successtitle span{
+	vertical-align:middle;
+	font-size:16px;
+	font-weight:bolder;
+	overflow:hidden;
+	display:inline-block;
+}
+.successtitle .icon{
+	background:url(img/reflash_tip.png) no-repeat;	
+	width:60px;
+	height:65px;
+	display:inline-block;
+	margin-right:8px;
+}
+.register-line {
+    width:510px;
+    height:54px;
+} 
+.register-name {                                                                                                                
+   font-size: 14px;
+   width: 80px;
+   text-align: right;
+   height: 54px;
+   line-height: 54px;
+   overflow: hidden;
+   float: left;
+   clear: left;
+}
+.register-input{
+       width: 160px;
+       height: 44px;
+       padding-top: 10px;
+       overflow: hidden;
+       padding-left: 13px;
+       float: left;
+     }
+.register-input input {
+       width: 149px;
+       height: 30px;
+       line-height:30px;
+       border: 1px solid #aaa;
+       background: #FFF url("img/i-shadow.png") repeat-x;
+     }
+ .register-notice {
+        height: 32px;
+        line-height:32px;
+        font-size: 12px;
+        padding-top:12px;
+        overflow: hidden;
+        padding-left: 24px;
+        color: #7f7f7f;
+      }
+ .save_user_info .register-notice{ 
+    height:35px;
+}
+.register-submit {                                                                                                              
+       width: 205px;
+       height: 44px;
+       padding-top: 10px;
+       overflow: hidden;
+       padding-left: 13px;
+     }
+.register-submit input {
+       width: 127px;
+       height: 32px;
+    }
+.contact-banker-button {
+          width: 130px;
+          height: 29px;
+          line-height: 29px;
+          overflow: hidden;
+          text-align: center;
+          font-size: 13px;
+          float: left;
+          margin-right: 20px;
+        }
+.blue-button {
+    border: 1px solid #2D53AF;
+    background: -moz-linear-gradient(top, #4C7CDD, #5385E0);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#4C7CDD), to(#5385E0));
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4C7CDD', endColorstr='#5385E0'); 
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#4C7CDD', endColorstr='#5385E0')";
+    box-shadow: 0 1px 3px #ECECEC;
+    -webkit-box-shadow: 0 1px 3px #ececec;
+    -moz-box-shadow: 0 1px 3px #ececec;
+    color: #FFF;
+    cursor: pointer;
+    overflow: hidden;
+}
+/* x: -(n-1)*67 px    y: -(n-1)*70 px */
+/* 抵押成数 */
+.s100_85{
+	background-position: -67px -140px;
+}
+.s100_100{
+	background-position: -469px -140px;
+}
+.s100_70{
+	background-position: -469px -210px;
+}
+.s100_80{
+	background-position: -536px -210px;
+}
+
+/* n年授信 */
+.s200_2{
+	background-position: -536px -140px;
+}
+.s200_3{
+	background-position: 0 -140px;
+}
+.s200_5{
+	background-position: -603px -140px;
+}
+.s200_10{
+	background-position: -670px -210px;
+}
+/* 二次抵押 */
+.s300{
+	background-position: -134px -140px;
+}
+/*放款快速*/
+.s400_0{
+	background-position: -268px -280px;
+}
+.s400_2{
+	background-position: -201px -140px;
+}
+.s400_3{
+	background-position: -603px -210px;
+}
+.s400_7{
+	background-position: -670px -140px;
+}
+.s400_15{
+	background-position: -737px -140px;
+}
+.s400_50{
+	/*放款速度快*/
+	background-position: -335px -140px;
+}
+/* 条件宽松 */
+.s500{
+	background-position: -268px -140px;
+}
+/* 可无信用记录 */
+.s600{
+	background-position: -67px -210px;
+}
+/* 利率低 */
+.s620{
+	background-position: 0 -210px;
+}
+/* 贷款额度高*/
+.s630{
+	background-position: -201px -210px;
+}
+/* 手续简便 */
+.s640{
+	background-position: 0 -280px;
+}
+/* 可上门服务 */
+.s650{
+	background-position: -67px -280px;
+}
+/* 无抵押无担保*/
+.s660{
+	background-position: -201px -350px;
+}
+/* 可提前还款*/
+.s665{
+	background-position: 0 -350px;
+}
+/* 用途多样*/
+.s666{
+	background-position: -67px -350px;
+}
+
+/* 特定人群 */
+.s700, .s700_0, .s700_1, .s700_2{
+	background-position: -201px 0;
+}
+/* 工资要求高 */
+.s800_40{
+	background-position: -268px 0;
+}
+.s800_50{
+	background-position: -603px 0;
+}
+.s800_60{
+	background-position: -536px 0;
+}
+/* 本地房产 */
+.s900{
+	background-position: -134px 0;
+}
+/* 流水要求高 */
+.s1000_10{
+	background-position: 0 0;
+}
+.s1000_20{
+	background-position: -470px -73px;
+}
+.s1000_30{
+	background-position: -469px 0;
+}
+.s1000_50{
+	background-position: -537px -73px;
+}
+/* 需要担保 */
+.s1100{
+	background-position: -67px 0;	
+}
+/* 需要互保 */
+.s1200{
+	background-position: 0 -70px;	
+}
+/* 需按揭记录*/
+.s1300{
+	background-position: -201px -70px;
+}
+/* 需证券质押*/
+.s1400{
+	background-position: -268px -70px;
+}
+
+/*支持二手车*/
+.s1600{
+	background-position:-803px -140px;
+}
+/* 只支持本地牌 */
+.s1610{
+	background-position:-803px 0;
+}
+/* 不支持二手车 */
+.s1620{
+	background-position:-803px  -70px;
+}
+/*支持公司牌*/
+.s1630{
+	background-position:-803px -210px;
+}
+/*p2p*/
+.s1700{
+	background-position:-335px -0px;
+}
+/*非金融机构*/
+.s1800{
+	background-position:-67px -70px;
+}
+/*信用要求松*/
+.s1900{
+	background-position:-134px -210px;
+}
+/*信用要求严*/
+.s1910{
+	background-position:-134px -70px;
+}
+/*有房即可贷*/
+.s2000{
+	background-position:-267px -210px;	
+}
+/*房龄要求高*/
+.s2010_10{
+	background-position:0 -420px; 	
+}
+.s2010_15{
+	background-position:-468px -420px; 	
+}
+/*面积要求高*/
+.s2020_70{
+	background-position:-67px -420px;
+}
+.s2020_100{
+	background-position:-536px -420px;
+}
+.s2020_120{
+	background-position:-603px -420px;
+}
+/*房价要求高*/
+.s2030_80{
+	background-position:-134px -420px;
+}
+.s2030_100{
+	background-position:-670px -420px;
+}
+.s2030_120{
+	background-position:-737px -420px;
+}
+/*不接受二抵*/
+.s2040{
+	background-position:-201px -420px;
+}
+/*房产要求严*/
+.s2050{
+	background-position:-268px -420px;
+}
+/*限中心区域*/
+.s2060{
+	background-position:-335px -420px;
+}
+/*指定区域*/
+.s2070{
+	background-position: 0 -490px;
+}
+/*仅接受新房*/
+.s2080{
+	background-position: -201px -490px;
+}
+/*限二手房*/
+.s2090{
+	 background-position: -268px -490px;
+}
+/*要求备用房*/
+.s2100{
+	background-position: -335px -490px;
+}
+/*车龄要求高*/
+.s2200_5{
+	background-position: -469px -490px;
+}
+.s2200_3{
+	background-position: -67px -490px;
+}
+/*车价要求高*/
+.s2210_10{
+	background-position: -536px -490px;
+}
+.s2210_15{
+	background-position: -603px -490px;
+}
+.s2210_8{
+	background-position: -134px -490px;
+}
+/*放款速度慢*/
+.s2300_10{
+	background-position: 0 -560px;
+}
+.s2300_20{
+	background-position: -469px -560px;
+}
+/*手续繁琐*/
+.s2310{
+	background-position: -67px -560px;
+}
+/*需上门查实*/
+.s2320{
+	background-position: -134px -560px;
+}
+/*需本地户籍*/
+.s2330{
+	background-position: -201px -560px;
+}
+/*有行业限制*/
+.s2340{
+	background-position: -268px -560px;
+}
+/*不接受现金*/
+.s2350{
+	background-position: -335px -560px;
+}
+/*需打卡工资*/
+.s2360{
+	background-position: 0 -630px;
+}
+/*高工作年限*/
+.s2370_1{
+	background-position: -67px -630px;
+}
+.s2370_2{
+	background-position: -469px -630px;
+}
+.s2370_3{
+	background-position: -536px -630px;
+}
+/*需营业执照*/
+.s2380{
+	background-position: -134px -630px;
+}
+/*固定经营场所*/
+.s2390{
+	background-position: -201px -630px;
+}
+/*高经营年限*/
+.s2400_3{
+	background-position: -268px -630px;
+}
+.s2400_5{
+	background-position: -603px -630px;
+}
+/*高负债限制*/
+.s2410_50{
+	background-position: -335px -630px;
+}
+.s2410_70{
+	background-position: -670px -630px;
+}
+.s2410_100{
+	background-position: -737px -630px;
+}
+.select_bank{
+    border:1px #ddd solid;
+    width:178px;
+    height:27px;
+    background: url(img/droparrow.gif) no-repeat right top;
+}
+.select_bank p{
+    color:#999;
+    cursor:pointer; 
+    padding:0px;
+    margin:0px;
+    line-height:27px;
+    padding-left:33px;
+}
+.select_bank p.sel{
+    color:#666;
+}
+.shouru_yinhang{
+    background:url(img/shouru_bank.png) no-repeat 5px 0;
+}
+.shouru_xianjin{
+    background:url(img/shouru_xianjin.png) no-repeat 5px 0;
+}
+.select_ul{
+    display:none;
+    border:1px #ddd solid;
+    background:#fff;
+    width:178px;
+    height:200px;
+    overflow-y:scroll;
+    position:absolute;
+    z-index:1000;
+}
+.select_ul li{
+    border:none;
+    width:161px;
+    padding:0;
+}
+.select_ul a{
+    display: block;
+    color:#666;
+    padding-left:33px;
+    clear: both;
+    font-weight: normal;
+    white-space: nowrap;
+    text-decoration: none;
+    outline: none;
+}
+.select_ul a:hover {
+    background:#f0f0f0;
+    color:#666;
+}
+.income_box{
+    float:left;
+    width:190px;
+    height:30px;    
+    padding:0 0 0 10px;
+    position:relative;
+}
+.open .select_ul{
+    display:block;
+}
+.selector-conditions .dropdown {
+    outline: none;
+    display: inline-block;
+}
+.selector-conditions .dropdown h4 {
+    line-height: 21px;
+    height: 21px;
+    border: solid 1px #ddd;
+    font-weight: normal;
+    background: url(img/droparrow.gif) no-repeat right top;
+}
+.selector-conditions .dropdown h4 {
+    cursor: default;
+    font-size: 12px;
+    text-indent: 5px;
+    margin: 0;
+    padding: 3px 5px;
+}
+.selector-conditions .dropdown h4.item_on_0 {
+    color: #999;
+}
+.selector-conditions .dropdown ul {
+    border: 1px solid #ddd;
+    background: #FFF;
+    margin-top: -1px;
+}
+.selector-conditions .dropdown ul {
+    position: absolute;
+    display: none;
+    margin: 0;
+    padding: 0;
+    float: left;
+    clear: both;
+}
+.selector-conditions .dropdown ul li{
+    width:100px;
+    padding-left:10px;
+    border:none;
+    cursor:pointer;
+}
+.selector-conditions .dropdown ul li:hover {
+    background:#ddd;
+}
+
+.content-title, .result, .rec, .sr-b-tip, .search-mediary, .filter-content {
+width: 100%;
+}

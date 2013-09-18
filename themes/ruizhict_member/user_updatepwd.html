@@ -1,0 +1,56 @@
+{include file="header.html" template_dir="themes/ruizhict"}
+<link rel="stylesheet" href="{$tempdir}/style/css/register.css" />
+<!--用户注册 开始-->
+<div class="user_action_main topborder" id="mailverify">
+
+	<div class="zcbigtitle">
+
+		<strong>修改密码</strong>
+
+	</div>
+
+	<!--用户注册左边 开始-->
+	<div class="registercontent1">
+		<!--用户注册 开始-->
+		<div class="user_action_reg_left">
+		<div class="user_action_getpwd_top"></div>
+		<div class="user_action_reg_submit" style="padding-top:0;padding-left:20px;">
+			<form action="" method="post" name="formUser" >
+			<div class="user_action_reg_form">
+				{if $_U.updatepwd_msg!=""}
+					<br /><font color="#FF0000">{$_U.updatepwd_msg}</font><br /><br /><br />
+					<a href="index.php?user&q=action/login">返回登录</a>
+				{else}
+				<p>{if $_U.update_msg==""}请重新设置你的登录密码{else}<font color="#FF0000">{$_U.update_msg}</font>{/if}</p>
+				<p>
+				  <label for="email">用户名：</label>
+				  <strong style="font-size:16px;">{$_U.user_result.username}</strong>
+				</p>
+				<p>
+				  <label for="email">密码：</label>
+				  <input type="password" maxLength=15  class="user_aciton_input1" name=password id=password >
+				</p>
+				<p>
+				  <label for="email">确认密码：</label>
+				  <input type="password"  maxLength=15  class="user_aciton_input1" name=confirm_password id=confirm_password  >
+				</p>
+				<p  align="left">
+				<span> <input type="submit" value="" class="sb"  /> <input type="hidden" name="id" value="{$magic.request.id}" /></span>
+				</p>	
+				{/if}
+			</div>
+			</form>
+		</div>
+				
+		</div>
+		<div class="user_action_reg_foot"></div>
+	</div>
+	
+	<!--用户注册右边 开始-->
+	{include file="user_reg_right.html"}
+	<!--用户注册右边 结束-->
+</div>
+<!--用户注册 结束-->
+
+
+{include file="../ruizhict/footer.html"}

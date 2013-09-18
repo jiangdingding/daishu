@@ -1,0 +1,38 @@
+ {include file="header.html"}
+
+
+	<div class="clearfix index-middle" id="clearfix_index-middle" style="margin: 20px auto 0;">
+		
+		<div class="wrap950 mar10">
+			<div class="kefu_bg" style="width: 960px;height: 167px;overflow: hidden;background: url(/themes/ruizhict/images/kefu_bg.jpg);margin-bottom: 10px;">
+				<div style="padding:20px;font-size:16px;color:#FF9000;">{$_G.system.con_kefutext}</div>
+			</div>
+			
+
+		</div>
+		
+		<!--借款帮助 开始-->
+		<div class="block-a">
+
+			<div class="block-title">借款入门帮助</div>
+
+			<div>
+				<ul class="question_list">
+					{loop module="article" function="GetList" limit="16" site_id="10"}
+					<li hover-class="hover" class="i-pd-item-first clearfix"><a
+						target="_blank" href="/{$var.site_nid}/a{$var.id}.html" class="fl q-title">{$var.name}</a>
+					</li> {/loop}
+				</ul>
+			</div>
+			<div class="foot"></div>
+			<div></div>
+		</div>
+		<!--借款帮助 结束-->
+<!--  
+		<div class="wrap950">
+			<img src="{$tpldir}/images/banner_company.jpg" />
+		</div>
+-->		
+	</div>
+
+{include file="footer.html"}

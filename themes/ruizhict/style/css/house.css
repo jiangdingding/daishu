@@ -1,0 +1,1021 @@
+﻿/*布局*/
+.main-part{
+    padding:0;
+    margin-bottom:20px;
+    box-shadow:none;
+}
+.box-shadow-white{
+    filter:none;
+    background:none;
+}
+.r-grid{
+    zoom:1;
+}
+.r-grid:after,
+.clearfix:after,
+.r-gr:after,
+.r-flud:after
+{
+    content:"\20";
+    font-size:0;
+    height:0;
+    display:block;
+    overflow:hidden;
+    clear:both;
+    font-size:0;
+    line-height:0;
+}
+.clear{
+    display:block;
+    font-size:0;
+    line-height:0;
+    overflow:hidden;
+    clear:both;
+    height:0;
+}
+.r-w{
+    width:960px;
+    margin:0 auto;
+}
+
+.r-gr{
+    float:right;
+}
+.r-gl{
+    float:left;
+}
+.r-flud{
+    display:table-cell; *display:inline-block;
+    border:1px solid #ddd;
+    background-color:#fff;
+}
+
+/*房贷页面布局*/
+.house-grid{
+    overflow:hidden;
+}
+.house-grid .sidebar{
+    width:240px;
+    border:1px solid #ddd;
+    margin-left:-1px;
+    background:#f8f8f8 url(img/side_bg.png) repeat-y;
+    float:left;
+    overflow:hidden;
+}
+.house-grid .r-flud{
+    width:717px;
+    float:left;
+}
+
+.detail .sidebar{
+    width:300px;
+    margin-bottom:0;
+    padding-bottom:0;
+    border:1px solid #ddd;
+    float:left;
+    margin-left:-1px;
+}
+.detail .r-flud{
+    width:655px;
+    margin-bottom:0;
+    padding-bottom:0;
+    border:none;
+    background:none;
+}
+.product-detail{
+    background-color:#fff;
+    border:1px solid #ddd;
+    *width:100%;
+    position:relative;
+}
+
+/*页面元素样式*/
+.tooltip{
+    color:#999;
+    text-decoration:underline;
+}
+.orange_btn{
+    background:url(img/orange_btn.jpg) no-repeat left top;
+    height:31px;
+    overflow:hidden;
+    text-align:center;
+    font-size:14px;
+    color:#fff;
+    cursor:pointer;
+}
+.orange_btn .inner{
+    height:31px;
+    background:url(img/orange_btn.jpg) no-repeat right bottom;
+    line-height:31px;
+    font-size:13px;
+    text-shadow: 1px 1px #BD6600;
+    font-weight:bolder;
+}
+
+.house_test_btn{
+    width:155px;
+    margin: 20px 0 30px 0;
+    font-size:12px;
+}
+
+
+.product-title,
+.detail h2.title,
+h2.calculator_title{
+    margin:10px;
+    border-bottom:2px solid #7b8192;
+}
+h2.calculator_title{
+    margin:15px 0 0 0;
+    padding:5px 0;
+}
+
+.detail .desc_content{
+    margin:20px 20px 30px 20px;
+    color:#222222;
+}
+.detail .calculator_wrap,
+.detail .contact_banker_wrap{
+    margin:0 10px 30px 10px;
+    border:1px solid #ddd;
+    border-top:none;
+}
+.detail .contact_banker_wrap{
+    border:none;
+}
+
+.detail .desc_list{
+    display:inline-block;
+    *display:inline;
+    margin:0 50px 7px 0;
+    line-height:160%;
+}
+.detail .fea_desc_list{
+    display:block;
+    margin-right:0;
+}
+
+.detail .last_desc_list{
+    margin-right:0;
+}
+
+.desc_list dt,.desc_list dd{
+    display:inline-block;
+    *display:inline;
+    margin:0;
+    padding:0;
+    vertical-align:top;
+}
+.desc_list dt{
+    font-weight:bolder;
+}
+.detail .block_desc{
+    display:block;
+}
+.fea_desc_list dt,.fea_desc_list dd{
+    float:left;
+}
+.fea_desc_list dd{
+    width:540px;
+}
+
+
+.detail h1.title,
+.detail h2.title{
+    font-size:18px;
+    padding:10px 0;
+    color:#3c4863;
+}
+.detail h2.calculator_title{
+    margin-bottom:0;
+}
+.detail h2.banker_list_title{
+    border-bottom:2px solid #FC8D37;
+    margin-bottom:0;
+}
+.banker_list_title .r-gl{
+    margin-top:5px;
+}
+
+.detail h1.title{
+    margin:0;
+}
+.detail small,.detail .pd_title .more{ 
+    font-size:12px;
+    font-weight:normal;
+    display:inline-block;
+}
+
+h1 small,
+h2 small{
+    color:#999999;
+    margin-left:15px;
+}
+
+.detail .pd_title .more{
+    color:#999;
+    display:inline-block;
+    margin-left:15px;
+    text-decoration:underline;
+}
+.detail .product-title .bank_icon{
+    height:43px;
+    overflow:hidden;
+}
+.detail .product-title .bank_icon img{
+    height:43px;
+}
+
+.detail .lilv_desc table{
+    width:100%;
+    border:1px solid #ddd;
+    border-collapse:collapse;
+    text-align:center;
+    margin-bottom:10px;
+}
+.detail .lilv_desc th{
+    height:25px;
+    background-color:#f4f4f4;
+    border:1px solid #ddd;
+    color:#666;
+    font-weight:normal;
+}
+.detail .lilv_desc td{
+    height:25px;
+    border:1px solid #ddd;
+}
+
+.rate{
+    color:#ff6000;
+}
+
+.pd_note span{
+    float:left;
+}
+.pd_note .note_label{
+    width:40px;
+}
+.pd_note .note_desc{
+    width:555px;
+    overflow:hidden;
+}
+
+/*计算器*/
+.calculator_wrap{
+    background-color:#fafafa;
+}
+.calculator_dialog{
+    width:700px;
+}
+.calculator_dialog  .p{
+    border-top:none;
+}
+.calculator_dialog .re{
+    padding-left:25px;
+    background-color:#f9faff;
+    border-top:1px solid #ddd;
+}
+.calculator_dialog .calculator{
+    padding:0;
+    width:480px;
+}
+.calculator_dialog .calculator_wrap{
+    border:1px solid #ddd;
+    border-top:none;
+}
+.calculator_dialog  .f{
+    border-top:none;
+}
+.calculator_dialog #comp-result{
+    padding:20px 25px;
+}
+
+.calculator_dialog .i{
+    padding:10px 20px;
+}
+.calculator_dialog .close{
+   display:block;
+   width:20px;
+   height:20px;
+   text-indent:-9999px;
+   background: url("img/close.gif") no-repeat center center;
+   position:absolute;
+   right:10px;
+   top:10px;
+}
+
+.calculator{
+    width:458px;
+    border-right:1px solid #ddd;
+    background-color:#fff;
+}
+.calculator_list{
+    width:165px;
+}
+
+.calculator .types{
+    margin:0;
+    padding:0;
+    height:auto;
+    position:relative;
+    z-index:2;
+}
+.calculator .types a{
+    width:130px;
+    border:none;
+    border-right:1px solid #ddd;
+    border-left:1px solid #ddd;
+    background:none;
+    text-align:center;
+    height:32px;
+    line-height:32px;
+    font-size:14px;
+}
+.calculator .types a.on{
+    font-weight:bolder;
+    background-color:#fff;
+}
+
+.calculator .cal_type{
+    border-top:1px solid #ddd;
+    margin-top:-4px;
+    *margin-top:-1px;
+    position:relative;
+    z-index:1;
+    padding:25px 10px 10px 10px;
+}
+.calculator .cal_type form{
+    margin-bottom:10px;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+
+.calculator .cal_type .btn-wrap{
+    text-align:left;
+    padding-left:59px;
+    margin-bottom:25px;
+}
+.calculator .cal_type .btn-wrap .btn-grey-2,#sidebar .btn-grey-2{
+    width:100px;
+    padding:0;
+    text-align:center;
+    text-decoration:none;
+    height:28px;
+    line-height:28px;
+    display:inline-block;
+    color:#333;
+    font-weight:bolder;
+}
+.d-no-evaluate-btn{
+    width:100px;
+    margin-left:59px;
+}
+.calculator .f_line{
+    line-height:24px;
+    position:relative;
+}
+.calculator .sb_input input{
+    border:1px solid #ddd;
+    width:110px;
+    height:20px;
+    line-height:20px;
+}
+.calculator .sb_suffix{
+    background:none;
+    border:none;
+    width:20px;
+    line-height:24px;
+}
+.calculator .sb_input_wrap{
+    border:none;
+}
+.calculator_list ul{
+    margin-bottom:0;
+    padding-bottom:5px;
+}
+.calculator_list h4{
+    font-size:14px;
+    padding:0;
+    margin:0 10px 5px 0;
+    border-bottom:1px solid #ddd;
+    height:30px;
+    line-height:30px;
+}
+.calculator_list li{
+    padding:5px 0;
+    float:none;
+}
+.calculator_list .fl{
+    float:none;
+}
+.calculator_list a{
+    color:#888
+}
+.calculator_list a:hover{
+    color:#0092ff;
+}
+/*网络贷款浏程*/
+.wdlc_sy {
+    font-size:12px;
+    font-weight:normal;
+    width:381px;
+    height:24px;
+    background:url("img/shenqingliucheng.gif");
+    margin-top:2px;
+}
+.wdlc_sy li {
+    color:#999;
+    float:left;
+    width:107px;
+    line-height:24px;
+    height:24px;
+    text-align:center;
+}
+.wdlc_sy li.title {
+    width:60px;
+    text-align:left;
+}
+.wdlc_sy li.first{
+    color:#333;
+    text-align:left;
+    padding-left:18px;
+    width:89px;
+}
+
+/*信贷员列表*/
+.pd_xdy_w{
+   padding: 10px 5px 10px 15px;
+   background-color:#fffae8;
+   border-bottom:1px solid #e5e1d0;
+}
+.pd_l_block .hover-item {
+    background-color: #ffefb0;
+    cursor: pointer;
+}
+.pd_xdy_name{
+    color: #222;
+    font-weight: bold;
+    font-size: 14px;
+    vertical-align:middle;
+}
+.pd_xdy_icon{
+    background:#fff;
+    border:1px solid #ddd;
+    text-align:center;
+    width:55px;
+    height:55px;
+    line-height:55px;
+    overflow:hidden;
+    vertical-align:middle;
+    margin-right: 15px;
+}
+.pd_xdy_icon img{
+    vertical-align:middle;
+}
+.pd_xdy_intro{
+    width:360px;
+    line-height: 22px;
+    color:#222;
+}
+.certified{
+    display:inline-block;
+    width:46px;
+    height:18px;
+    position:relative;
+    background:url(img/banker_icon.gif) no-repeat 0 0 ;
+    vertical-align:middle;
+}
+.pd_xdy_jy li{
+    float:left;
+    padding-right: 12px;
+}
+.pd_xdy_jy .pj{
+    *margin-top: -1px !important;
+}
+.pd_xdy_act{
+    margin-right: 10px;
+    padding: 15px 30px 15px 13px;
+}
+
+.bank_adds_map table{
+    width:100%;
+    border:1px solid #ddd;
+    border-collapse:collapse;
+    text-align:center;
+}
+.bank_adds_map table td{
+    height:25px;
+    background-color:#fff6e1;
+    font-size:14px;
+    border:1px solid #ddd;
+}
+.bank_adds_map table .first td{
+    background-color:#fcf2cf;
+    font-weight:bolder;
+}
+.bank_adds_map table .odd td{
+    background-color:#fffae6;
+}
+.bank_adds_map p{
+    display:none;
+}
+.bank_adds_map table p{
+    display:block;
+}
+
+table.fdjz_table{
+    width:300px;
+    border-collapse:collapse;
+    text-align:center;
+    border:1px solid #ddd;
+}
+.fdjz_table td{
+    border:1px solid #ddd;
+    height:20px;
+}
+.fdjz_table thead td{
+    background:#eee;
+}
+
+
+
+/*各种介绍细则tab*/
+.feature_tab{
+    margin:10px;
+}
+.pd_other_item_head {
+    border-bottom: 1px solid #DDDDDD;
+    padding: 20px 0 10px 22px;
+}
+.pd_other_item_title {
+    background: url("img/d-m-arrow.png") no-repeat 0 6px;
+    padding: 0 0 0 10px;
+    color: #7F7F7F;
+}
+.save_product_btn {
+    position: absolute;
+    top: 30px;
+    right: 8px;
+    _right: 15px;
+    cursor: pointer;
+    padding-left: 22px;
+    background: url("img/small_email_icon.gif") 0 2px no-repeat;
+}
+.pd_title {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 22px;
+    color: #222;
+}
+
+.pd_other_item_content {
+    line-height: 25px;
+    padding: 10px 0 10px 32px;
+    color: #222;
+}
+#pd_other_tab {
+    padding-top: 5px;
+    background: #fff;
+}
+.pd_other_tab li {
+    float: left;
+    height: 31px;
+    line-height: 31px;
+    width: 88px;
+    text-align: center;
+    margin-right: 2px;
+    background: url("img/xuanfu_default.gif") no-repeat;
+    font-size: 14px;
+}
+.pd_other_tab .pd_other_tab_current {
+    font-weight: bold;
+    background: url("img/xuanfu_hover.gif") no-repeat;
+    width: 98px;
+    height: 33px;
+    position: relative;
+}
+.pd_other_tab a {
+    color: #666;
+}
+.pd_other_tab_yidong {
+    position: fixed;
+    top: 0;
+    _position: absolute;
+    z-index: 99;
+    width: 653px;
+    margin-left: -10px;
+}
+.pd_other_tab_yidong .pd_other_tab{
+    padding-left:10px;
+}
+.yinying{
+    border-top: 2px #b9b9b9 solid;
+    margin-top: -2px;
+    _height: 0px;
+    _line-height: 0px;
+}
+.yinying-bg {
+    border-top: 1px #b9b9b9 solid;
+    position: relative;
+    z-index: 2;
+    background: url("img/yinying-bg.gif") repeat-x;
+    height: 4px;
+}
+
+.pd_other_tab .applyfor {
+    float: right;
+    width: 121px;
+    background: url("img/apply-for.gif") no-repeat;
+    margin: 0 35px 4px 0;
+    height: 29px;
+}
+.xuanfu38{
+    margin-top:-38px;
+    _margin-top: 0px;
+}
+
+/*底部*/
+
+.bottom-part 
+{
+    border:1px solid #ddd;
+    margin-top:20px;
+    background:#fff;
+    *width:100%;
+}
+.mod{
+    background-color:#fff;
+}
+.detail .mod h2{
+    height:20px;
+    background-color:#f4f5f6;
+    margin:0;
+    padding:10px 18px;
+    border-bottom:1px solid #ddd;
+    border-top:1px solid #ddd;
+    font-size:16px;
+    color:#333;
+}
+.mod h2.toptitle{
+    border-top:none;
+}
+.mod h2 .more,
+.sidebar h2 .more{
+    font-weight:normal;
+    font-size:12px;
+    color:#666;
+    text-decoration:underline;
+    margin-top:3px;
+}
+.article_list{
+    padding:5px 18px 35px 18px;
+}
+.article_list .item{
+    padding:10px 0;
+    border-bottom:1px dashed #ddd;
+}
+.article_list .item .r-gl,
+.side-articles .item a{
+    width:540px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.article_list a{
+    color:#333;
+}
+.article_list a:hover{
+    color:#0092ff;
+}
+.side-articles .item{
+    border:none;
+    padding:5px 0;
+}
+.side-articles .item a{
+    width:252px;
+    display:inline-block;
+}
+.side-articles{
+    padding:0;
+    padding-bottom:10px;
+    margin:0 15px;
+    border-bottom:1px solid #ddd;
+}
+
+
+/*侧边栏*/
+.detail .sidebar h2{
+    font-size:16px;
+    padding:5px 0;
+    margin:15px;
+}
+.links {
+    margin:10px 20px 40px 20px;
+}
+.links a{
+    float:left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    width:75px;
+    margin-right:10px;
+    line-height:150%;
+}
+
+i.money,
+i.ask,
+i.calicon,
+i.house_type1,
+i.house_type2,
+i.house_type3{
+    display:inline-block;
+    vertical-align:middle;
+    height:18px;
+    width:20px;
+    background:url(img/house_icons.png) no-repeat left top;
+    margin-right:5px;
+}
+i.ask{
+    background-position:0 -19px;
+}
+i.house_type1{
+    background-position: 0 -40px;
+    width:15px;
+}
+i.house_type2{
+    background-position: 0 -59px;
+    width:15px;
+}
+i.house_type3{
+    background-position: 0 -78px;
+    width:15px;
+}
+i.calicon{
+   height:25px;
+   background-position:0 -100px;
+}
+
+.btn-wrap{
+    text-align:center;
+    margin:10px auto 30px auto;
+}
+
+/*列表页*/
+.list-header{
+    font-size:14px;
+    padding:20px 20px 10px 20px;
+}
+.list-header b{
+    color:#0055bb;
+}
+
+.filter-nav{
+    background:#fff url(img/filter-selector-icons.gif) repeat-x left bottom;
+    border:none;
+    border-top:2px solid #4d7ddd;
+    border-bottom:1px solid #c8c8c8;
+    width:auto; 
+    padding:5px 20px;
+    height:30px;
+    position:relative;
+    z-index:2;
+}
+#result_page{
+    position:relative;
+    z-index:1;
+}
+.onfloat{
+    position:fixed;
+    top:0;
+    width:677px;
+    z-index:100;
+    _position:absolute;
+}
+.house_type_filter{
+    width:80px;
+}
+.house_type_dropmenu{
+    width:100px;
+}
+.house_type2{
+    width:120px;
+}
+.house2_type_dropmenu{
+    width:140px;
+}
+
+.no_result_wrap{
+    margin:30px;
+    font-size:14px;
+}
+
+.house_product_list .item{
+    padding:15px 20px 10px 20px;
+    border-bottom:1px solid #ddd;
+    position:relative;
+}
+.house_product_list .last{
+    border-bottom:0;
+}
+.house_product_list .has-agent,
+.house_product_list .has-banker{
+    background-image:url(img/fd_list_tag.png);
+    background-position:left top;
+    background-repeat:no-repeat;
+    position:absolute;
+    top:0;
+    left:0;
+    width:42px;
+    height:42px;
+}
+.house_product_list .has-agent{
+    background-position:left -45px;
+}
+.house_product_list .item-hover{
+    background-color:#f6f6f6;
+}
+.house_product_list .key-desc{
+    display:inline-block;
+    margin-left:10px;
+    color:#353f63;
+}
+.house_product_list .bank_icon{
+    width:42px;
+    height:42px;
+    background:#fff;
+    margin-right:20px;
+    border:1px solid #ddd;
+}
+.house_product_list .product_info{
+    width:485px;
+}
+.house_product_list h4{
+    font-size:16px;
+    margin:0;
+    padding:0 0 5px 0;
+}
+.house_product_list p{
+    margin:0;
+    padding:5px 0 10px 0;
+}
+.house_product_list .house_suppot_types,
+.house_product_list .house_type{
+    display:inline-block; 
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.house_product_list .house_suppot_types{
+    width:150px;
+}
+.house_product_list .house_type{
+    width:320px;
+}
+.house_product_list .features li{
+    border-top:1px dashed #ddd;
+    line-height:20px;
+    padding:5px 0;
+    color:#333;
+}
+.house_product_list a{
+    color:#0055bb;
+}
+.house_product_list i{
+    float:left;
+}
+.house_product_list .features .type{
+    float:left;
+    overflow:hidden;
+    width:98px;
+}
+.house_product_list .features b{
+    float:left;
+    overflow:hidden;
+    width:120px;
+}
+.house_product_list .first_pay{
+    float:left;
+    width:240px;
+}
+.view-it{
+    display:block;
+    width:92px;
+    height:30px;
+    background:url('img/view_it.png') no-repeat left top;
+    margin-top:50px;
+    text-indent:-9999px;
+    zoom:1;
+}
+.view-it-hover{
+    background-position:0 -30px;
+}
+.view-it-active{
+    background-position:0 -60px;
+}
+.sidemod{
+    padding:0 15px;
+}
+.sidemod h2{
+    border-bottom:2px solid #ababab;
+    padding-bottom:5px;
+    margin-bottom:0;
+}
+.sidemod .side-articles{
+    margin:10px 0;
+}
+.simple_calculator{
+    border:1px solid #ddd;
+    border-top:none;
+    padding:10px;
+    margin-bottom:20px;
+}
+
+.simple_calculator .field{
+    margin-bottom:10px;
+}
+.simple_calculator .label{
+    display:inline-block;
+    width:55px;
+}
+.simple_calculator .value{
+    display:inline-block;
+    width:120px;
+}
+.simple_calculator .txt{
+    width:95px;
+    padding:1px 2px;
+    border:1px solid #ddd;
+    margin-right:5px;
+    height:22px;
+    line-height:normal;
+}
+
+.sidemod .cal-result{
+    border:1px solid #ddd;
+    margin-bottom:20px;
+    margin-top:-20px;
+    border-top:none;
+    padding:10px 0;
+    display:none;
+}
+.sidemod .cal-result .label{
+    width:78px;
+    display:inline-block;
+    text-align:right;
+}
+
+.sidemod .dropsel{
+    background:#fff;
+    width:100px;
+    border:1px solid #ddd;
+    height:24px;
+    line-height:24px;
+    text-indent:10px;
+    position:relative;
+}
+.sidemod .dropsel i{
+    font-style:normal;
+    display:block;
+    height:24px;
+}
+.sidemod .dropsel b{
+    border-top:5px solid #999;
+    border-left:5px solid #fff;
+    border-right:5px solid #fff;
+    height:0;
+    line-height:0;
+    font-size:0;
+    overflow:hidden;
+    position:absolute;
+    top:9px;
+    right:10px;
+}
+.sidemod .open .dropdown-menu{
+    position:absolute;
+    top:24px;
+    left:-1px;
+    width:100px;
+    background:#fff;
+}
+.sidemod .dropdown-menu a{
+    padding-left:0;
+}
+
+.hover-tip{
+    padding:10px;
+}
+
+#month_pay{
+    color:#ff4000;
+    font-size:16px;
+    font-weight:bolder;
+}
+#total_pay{
+    margin-top:5px;
+    display:inline-block;
+    font-size:16px;
+    font-weight:bolder;
+}
+.page{
+    width:715px;
+}

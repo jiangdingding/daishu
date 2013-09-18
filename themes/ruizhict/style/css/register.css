@@ -1,0 +1,240 @@
+/*注册首页-开始*/
+#registerpage {
+	height: 570px;
+	width: 960px;
+	margin: 0 auto;
+	background-color:#ffffff;
+	
+}
+
+.zcbigtitle {
+	background-color: #F1F7FC;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-size: 23px;
+}
+
+#registerpage  .regimg {
+	width: 960px;
+	background: #F1F7FC;
+	padding-bottom: 0px;
+	text-align: center;
+}
+
+.regimg .img {
+	width: 960px;
+	position:relative;
+	top:3px;
+}
+
+.registercontent1 {
+	margin-top: 10px;
+	width: 960px;
+	margin: 0 auto;
+	
+}
+
+#registerpage  .leftregister1 {
+	width: 500px;
+	float: left;
+	border-right: #EFEFEF solid 1px;
+	margin-bottom: 0px;
+	padding-left: 0px;
+}
+
+#registerpage  .leftregister1 tr {
+	display: block;
+	height:35px;
+	margin-top: 10px;
+	margin-left: 30px;
+}
+
+
+.user_action_error {
+background: url("../assets/bd/check-error.png") no-repeat scroll -1px 0px transparent;
+color: #FF871A;
+padding-left: 18px;
+line-height: 18px;
+}
+
+#registerpage .registercontent1 .leftregister1 .td2 {
+	position: relative;
+	top: 3px;
+}
+
+#registerpage .registercontent1 .leftregister1 .tdlast {
+	padding-left: 20px;
+}
+
+#registerpage  .reg_button {
+	cursor: pointer;
+height: 32px;
+width: 128px;
+font-size: 16px;
+background: url(img/searchbt_blue_big.png);
+background-repeat-x: repeat;
+box-shadow: 0 1px 2px #000;
+color: #ffffff;
+margin-left: 70px;
+border: 0;
+	border: 0;
+}
+
+#rightregistercontent {
+	float: left;
+	width: 400px;
+	display: inline;
+	height: auto;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#rightregistercontent .user_action_button {
+	float: left;
+	margin-left: 50px;
+	width: 210px;
+}
+
+/*注册首页-开始*/
+
+/*邮箱验证-开始*/
+#mailverify {
+	width: 960px;
+	margin: 0 auto;
+	height: 530px;
+	background-color:#ffffff;
+}
+
+.user_action_reg_left {
+	float: left;
+	width: 500px;
+	margin: 0;
+	padding-top: 20px;
+	border-right: 1px solid;
+}
+
+/*邮箱验证-结束*/
+
+/*上传头像-开始*/
+#user_action_mainavatar {
+	width: 960px;
+	margin: 0 auto;
+	height: 530px;
+	background-color:#ffffff;
+}
+/*上传头像-结束*/
+
+
+
+<!--江丁丁添加 --> 
+/*认证积分*/
+.credit_pic_card_1 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 5px no-repeat;
+	height: 25px;
+	width: 40px;
+	float: left;
+	cursor: pointer;
+	overflow: hidden
+}
+
+.credit_pic_card_0,.credit_pic_card_2 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -25px no-repeat;
+	height: 25px;
+	width: 40px;
+	float: left;
+	cursor: pointer;
+	overflow: hidden
+}
+
+.credit_pic_phone_1 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -55px no-repeat;
+	height: 25px;
+	width: 20px;
+	float: left;
+	cursor: pointer
+}
+
+.credit_pic_phone_0,.credit_pic_phone_2 {
+	background: url(/themes/ruizhict/images/credit.gif) -20px -55px
+		no-repeat;
+	height: 25px;
+	width: 20px;
+	float: left;
+	cursor: pointer
+}
+
+.credit_pic_video_1 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -140px no-repeat;
+	height: 25px;
+	width: 20px;
+	margin-left: 5px;
+	float: left;
+	cursor: pointer
+}
+
+.credit_pic_video_0,.credit_pic_video_2 {
+	background: url(/themes/ruizhict/images/credit.gif) -20px -140px
+		no-repeat;
+	height: 25px;
+	width: 20px;
+	float: left;
+	cursor: pointer
+}
+
+.credit_pic_email_1 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -164px no-repeat;
+	height: 24px;
+	width: 25px;
+	float: left;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.credit_pic_email_0,.credit_pic_email_2 {
+	background: url(/themes/ruizhict/images/credit.gif) -0px -187px
+		no-repeat;
+	height: 24px;
+	width: 25px;
+	float: left;
+	cursor: pointer;
+	margin-left: 5px;
+}
+
+.credit_pic_vip_1 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -85px no-repeat;
+	height: 25px;
+	width: 40px;
+	float: left;
+	cursor: pointer
+}
+
+.credit_pic_vip_0,.credit_pic_vip_2 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -115px no-repeat;
+	height: 25px;
+	width: 40px;
+	float: left;
+	margin-left: 5px;;
+	cursor: pointer
+}
+
+.credit_pic_scene_1 {
+	background: url(/themes/ruizhict/images/credit.gif) 0 -210px no-repeat;
+	height: 25px;
+	width: 20px;
+	float: left;
+	cursor: pointer
+}
+
+.credit_pic_scene_0,.credit_pic_scene_2 {
+	background: url(/themes/ruizhict/images/credit.gif) -25px -210px
+		no-repeat;
+	height: 25px;
+	width: 20px;
+	float: left;
+	margin-left: 5px;;
+	cursor: pointer
+}

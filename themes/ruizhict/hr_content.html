@@ -1,0 +1,100 @@
+{include file="header.html"}
+
+<!-- jiangdingding添加 -->
+<link rel="stylesheet" href="{$tempdir}/style/css/article_style.css" />
+
+<div class="main-part box-shadow-white" id="page_wraper">
+	<div class="crumbs">{$_G.site_result.name}</div>
+
+	<div class="atc-left">
+		<div class="list-main">
+			<div class="act-content">
+				<h1>{$_G.article.name}</h1>
+				<div class="act-info">
+					<span> 发布者：{$_G.article.author|default:""} &nbsp;&nbsp;
+						发布时间：{$_G.article.addtime|date_format:"Y-m-d H:i:s"} &nbsp;&nbsp;
+						点击次数：{$_G.article.hits} </span>
+				</div>
+
+				<!--内容开始-->
+				<div class="content_ro">
+					<table>
+						<tr height="30">
+							<td><strong>工作地点：</strong>{$_G.article.area|area}</td>
+						</tr>
+						<tr height="30">
+							<td><strong>招聘人数：</strong>{$_G.article.num}</td>
+						</tr>
+						<tr height="30">
+							<td><strong>工作描述：</strong>{$_G.article.description}</td>
+						</tr>
+						<tr height="30">
+							<td><strong>工作要求：</strong>{$_G.article.demand}</td>
+						</tr>
+					</table>
+				</div>
+				<!--内容结束-->
+
+			</div>
+
+		</div>
+
+		<div class="content-left" style="margin-top:20px;">
+			<div class="tab-bar">
+				<ul>
+					<li class="active">评论</li>
+				</ul>
+
+			</div>
+			<div>{include file="pinglun.html"}</div>
+
+		</div>
+
+	</div>
+
+	<div class="list-right">
+		<!-- 最新公告 -->
+		<div div class="content-right">
+			<div class="right-title-bar">
+				<span class="fl">网站公告</span> <span class="fr"><a
+					href="/gonggao/index.html" target="_blank"
+					style="font-size: 12px;color:#666;text-decoration: underline;">更多</a>
+				</span>
+			</div>
+			<div class="atc-list right">
+				<ul>
+					{loop module="article" function="GetList" limit="6" site_id="22"}
+					<li><a href="/{$var.site_nid}/a{$var.id}.html"
+						title="{$var.name}">{$var.name|truncate:17}</a>
+					</li> {/loop}
+				</ul>
+			</div>
+		</div>
+		{include file="zixun_right.html"}
+		<!-- 新手指南 -->
+		<div class="content-right" style="margin-top:20px;">
+			<div class="right-title-bar">
+				<span class="fl">新手指南</span><span class="fr"><a
+					href="/new/index.html" target="_blank"
+					style="font-size: 12px;color:#666;text-decoration: underline;">更多</a>
+			</div>
+			<div class="atc-list right">
+				<ul>
+					{loop module="article" function="GetList" limit="6" site_id="10"}
+					<li><a href="?{$var.site_nid}/{$var.id}" title="{$var.name}">{$var.name|truncate:17}</a>
+					</li> {/loop}
+				</ul>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+</div>
+
+
+
+{include file="footer.html"}
+
